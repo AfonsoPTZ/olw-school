@@ -19,7 +19,7 @@ require_role('responsavel');
   <title>OlwSchool — Comunicados, Tarefas e Advertências</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/afonso/owl-school/public/assets/css/responsavel/home.css">
+  <link rel="stylesheet" href="/afonso/owl-school/public/assets/css/responsavel/comunicados.css">
   
 </head>
 
