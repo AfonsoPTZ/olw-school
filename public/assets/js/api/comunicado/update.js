@@ -53,7 +53,7 @@ async function salvarComunicado() {
     modal.hide();
 
   } else {
-    alert(resultado.success);
+    alert(resultado.message);
   }
 }
 

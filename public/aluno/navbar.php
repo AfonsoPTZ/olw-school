@@ -24,9 +24,6 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
       <li class="nav-item mb-2">
         <a class="nav-link text-white" href="desempenho.php">📊 Desempenho</a>
       </li>
-      <li class="nav-item mb-2">
-        <a class="nav-link text-white" href="jogos.php">🎮 Jogos</a>
-      </li>
       <li class="nav-item mt-3">
         <a class="nav-link text-danger fw-bold" href="/owl-school/public/logout.php">🚪 Sair</a>
       </li>

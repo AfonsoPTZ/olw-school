@@ -22,7 +22,7 @@ document.getElementById("formLogin").onsubmit = async function (e) {
     });
 
     const resultado = await resposta.json();
-
+    
     const tipo = resultado.usuario.tipo_usuario;
 
     if (tipo === "aluno")       window.location.href = "/owl-school/public/aluno/aluno.php";
