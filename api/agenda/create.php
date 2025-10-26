@@ -19,15 +19,6 @@ $horaFim    = $_POST['fim'];
 $disciplina = $_POST['disciplina'];
 
 
-if (empty($diaSemana) || empty($horaInicio) || empty($horaFim) || empty($disciplina)) {
-  echo json_encode([
-    "success" => false,
-    "message" => "Campos obrigatórios ausentes."
-  ]);
-  exit;
-}
-
-
 $stmt = $conn->prepare("INSERT INTO horarios_aula (dia_semana, inicio, fim, disciplina) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssss", $diaSemana, $horaInicio, $horaFim, $disciplina);
 

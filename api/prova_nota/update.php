@@ -18,15 +18,6 @@ $aluno_id = $_POST['aluno_id'];
 $nota     = $_POST['nota'];
 
 
-if (empty($prova_id) || empty($aluno_id) || empty($nota)) {
-    echo json_encode([
-        "success" => false,
-        "message" => "Campos obrigatórios ausentes."
-    ]);
-    exit;
-}
-
-
 $stmt = $conn->prepare("UPDATE prova_nota SET nota = ? WHERE prova_id = ? AND aluno_id = ?");
 $stmt->bind_param("dii", $nota, $prova_id, $aluno_id);
 

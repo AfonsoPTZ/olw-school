@@ -6,6 +6,11 @@ async function criarAdvertencia() {
   const aluno_id = document.getElementById("aluno_id").value;
 
 
+  if (titulo === "" || descricao === "" || aluno_id === "") {
+  alert("Preencha todos os campos antes de enviar.");
+  return;}
+
+
   const formularioDados = new FormData();
 
   formularioDados.append("titulo", titulo);
@@ -13,7 +18,7 @@ async function criarAdvertencia() {
   formularioDados.append("aluno_id", aluno_id);
 
 
-  const resposta = await fetch("/afonso/owl-school/api/advertencia/create.php", {
+  const resposta = await fetch("/owl-school/api/advertencia/create.php", {
     method: "POST",
     body: formularioDados
 

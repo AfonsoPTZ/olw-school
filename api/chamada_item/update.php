@@ -18,15 +18,6 @@ $alunoId   = $_POST['aluno_id'];
 $status    = $_POST['status'];
 
 
-if (empty($chamadaId) || empty($alunoId) || empty($status)) {
-    echo json_encode([
-        "success" => false,
-        "message" => "Campos obrigatórios ausentes."
-    ]);
-    exit;
-}
-
-
 $stmt = $conn->prepare("UPDATE chamada_item SET status = ? WHERE chamada_id = ? AND aluno_id = ?");
 $stmt->bind_param("sii", $status, $chamadaId, $alunoId);
 

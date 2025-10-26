@@ -19,15 +19,6 @@ $descricao    = $_POST['descricao'];
 $data_entrega = $_POST['data_entrega'];
 
 
-if (empty($id) || empty($titulo) || empty($descricao) || empty($data_entrega)) {
-    echo json_encode([
-        "success" => false,
-        "message" => "Campos obrigatórios ausentes."
-    ]);
-    exit;
-}
-
-
 $stmt = $conn->prepare("UPDATE tarefa SET titulo = ?, descricao = ?, data_entrega = ? WHERE id = ?");
 $stmt->bind_param("sssi", $titulo, $descricao, $data_entrega, $id);
 

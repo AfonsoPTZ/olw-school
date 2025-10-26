@@ -20,15 +20,6 @@ $titulo    = $_POST['titulo'];
 $descricao = $_POST['descricao'];
 
 
-if (empty($id) || empty($titulo) || empty($descricao)) {
-    echo json_encode([
-        'success' => false,
-        'message' => 'Campos obrigatórios ausentes.'
-    ]);
-    exit;
-}
-
-
 $stmt = $conn->prepare("UPDATE advertencia SET titulo = ?, descricao = ? WHERE id = ?");
 $stmt->bind_param("ssi", $titulo, $descricao, $id);
 

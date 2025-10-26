@@ -19,15 +19,6 @@ $titulo = $_POST['titulo'];
 $data   = $_POST['data'];
 
 
-if (empty($id) || empty($titulo) || empty($data)) {
-    echo json_encode([
-        "success" => false,
-        "message" => "Campos obrigatórios ausentes."
-    ]);
-    exit;
-}
-
-
 $stmt = $conn->prepare("UPDATE prova SET titulo = ?, data = ? WHERE id = ?");
 $stmt->bind_param("ssi", $titulo, $data, $id);
 

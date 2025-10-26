@@ -17,15 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $data = $_POST['data'];
 
 
-if (empty($data)) {
-  echo json_encode([
-    'success' => false,
-    'message' => 'Campos obrigatórios ausentes.'
-  ]);
-  exit;
-}
-
-
 $stmt = $conn->prepare("INSERT INTO chamada (data) VALUES (?)");
 $stmt->bind_param("s", $data);
 

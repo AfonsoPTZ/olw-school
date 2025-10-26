@@ -5,13 +5,18 @@ async function criarProva() {
   const data   = document.getElementById("data").value;
 
 
+  if (titulo === "" || data === "") {
+  alert("Preencha todos os campos antes de enviar.");
+  return;}
+
+
   const formularioDados = new FormData();
 
   formularioDados.append("titulo", titulo);
   formularioDados.append("data", data);
 
 
-  const resposta = await fetch("/afonso/owl-school/api/prova/create.php", {
+  const resposta = await fetch("/owl-school/api/prova/create.php", {
     method: "POST",
     body: formularioDados
 

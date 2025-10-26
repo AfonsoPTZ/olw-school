@@ -1,6 +1,6 @@
 async function carregarTarefas() {
 
-    const response = await fetch("/afonso/owl-school/api/tarefa/read.php", { method: "POST" });
+    const response = await fetch("/owl-school/api/tarefa/read.php", { method: "POST" });
     const resultado = await response.json();
 
 

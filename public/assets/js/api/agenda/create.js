@@ -7,6 +7,11 @@ async function criarHorario() {
   const disciplina = document.getElementById("disciplina").value;
 
 
+  if (dia_semana === "" || inicio === "" || fim === "" || disciplina === "" ) {
+  alert("Preencha todos os campos antes de enviar.");
+  return;}
+
+
   const formularioDados = new FormData();
 
   formularioDados.append("dia_semana", dia_semana);
@@ -15,7 +20,7 @@ async function criarHorario() {
   formularioDados.append("disciplina", disciplina);
 
 
-  const resposta = await fetch("/afonso/owl-school/api/agenda/create.php", {
+  const resposta = await fetch("/owl-school/api/agenda/create.php", {
     method: "POST",
     body: formularioDados
 

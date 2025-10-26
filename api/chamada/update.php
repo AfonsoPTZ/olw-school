@@ -18,15 +18,6 @@ $id   = $_POST['id'];
 $data = $_POST['data'];
 
 
-if (empty($id) || empty($data)) {
-    echo json_encode([
-        "success" => false,
-        "message" => "Campos obrigatórios ausentes."
-    ]);
-    exit;
-}
-
-
 $stmt = $conn->prepare("UPDATE chamada SET data = ? WHERE id = ?");
 $stmt->bind_param("si", $data, $id);
 

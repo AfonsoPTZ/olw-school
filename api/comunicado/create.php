@@ -19,15 +19,6 @@ $titulo = $_POST['titulo'];
 $corpo  = $_POST['corpo'];
 
 
-if (empty($titulo) || empty($corpo)) {
-  echo json_encode([
-    'success' => false,
-    'message' => 'Campos obrigatórios ausentes.'
-  ]);
-  exit;
-}
-
-
 $stmt = $conn->prepare("INSERT INTO comunicado (titulo, corpo) VALUES (?, ?)");
 $stmt->bind_param("ss", $titulo, $corpo);
 

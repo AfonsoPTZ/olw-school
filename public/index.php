@@ -13,16 +13,10 @@
   <!-- ============================== -->
   <!-- CSS próprio -->
   <!-- ============================== -->
-  <link rel="stylesheet" href="/afonso/owl-school/public/assets/css/index.css">
-  <link rel="stylesheet" href="/afonso/owl-school/public/assets/css/cursor.css">
+  <link rel="stylesheet" href="/owl-school/public/assets/css/index.css">
 </head>
 
 <body class="bg-light">
-
-  <!-- ============================== -->
-  <!-- Cursor personalizado -->
-  <!-- ============================== -->
-  <script src="/afonso/owl-school/public/assets/js/cursor.js"></script>
 
   <!-- ============================== -->
   <!-- Conteúdo principal -->
@@ -61,15 +55,10 @@
   </div>
 
   <!-- ============================== -->
-  <!-- Rodapé -->
-  <!-- ============================== -->
-  <?php include __DIR__ . '/../partials/footer.php'; ?>
-
-  <!-- ============================== -->
   <!-- Scripts -->
   <!-- ============================== -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/afonso/owl-school/public/assets/js/api/auth.js"></script>
+  <script src="/owl-school/public/assets/js/api/auth.js"></script>
 
 </body>
 </html>

@@ -19,15 +19,6 @@ $alunoId   = $_POST['aluno_id'];
 $status    = $_POST['status'];
 
 
-if (empty($chamadaId) || empty($alunoId) || empty($status)) {
-  echo json_encode([
-    'success' => false,
-    'message' => 'Campos obrigatórios ausentes.'
-  ]);
-  exit;
-}
-
-
 $stmt = $conn->prepare("INSERT INTO chamada_item (chamada_id, aluno_id, status) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE status = VALUES(status)");
 $stmt->bind_param("iis", $chamadaId, $alunoId, $status);
 

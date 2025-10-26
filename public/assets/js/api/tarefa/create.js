@@ -6,6 +6,11 @@ async function criarTarefa() {
   const data_entrega  = document.getElementById("data_entrega").value;
 
 
+  if (titulo === "" || descricao === "" || data_entrega === "") {
+  alert("Preencha todos os campos antes de enviar.");
+  return;}
+
+
   const formularioDados = new FormData();
 
   formularioDados.append("titulo", titulo);
@@ -13,7 +18,7 @@ async function criarTarefa() {
   formularioDados.append("data_entrega", data_entrega);
 
 
-  const resposta = await fetch("/afonso/owl-school/api/tarefa/create.php", {
+  const resposta = await fetch("/owl-school/api/tarefa/create.php", {
     method: "POST",
     body: formularioDados
 

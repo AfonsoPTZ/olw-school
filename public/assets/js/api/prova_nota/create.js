@@ -22,6 +22,11 @@ async function salvarCriacaoNota() {
   nota = nota.replace(",", ".");
 
 
+  if (nota === "") {
+  alert("Preencha todos os campos antes de enviar.");
+  return;}
+
+
   const formularioDados = new FormData();
 
   formularioDados.append("prova_id", idProvaAtual);
@@ -29,7 +34,7 @@ async function salvarCriacaoNota() {
   formularioDados.append("nota", nota);
 
 
-  const resposta = await fetch("/afonso/owl-school/api/prova_nota/create.php", {
+  const resposta = await fetch("/owl-school/api/prova_nota/create.php", {
     method: "POST",
     body: formularioDados
 

@@ -4,6 +4,11 @@ async function criarComunicado() {
   const titulo = document.getElementById("titulo").value;
   const corpo  = document.getElementById("corpo").value;
 
+  
+  if (titulo === "" || corpo === "") {
+  alert("Preencha todos os campos antes de enviar.");
+  return;}
+
 
   const formularioDados = new FormData();
 
@@ -11,7 +16,7 @@ async function criarComunicado() {
   formularioDados.append("corpo", corpo);
 
 
-  const resposta = await fetch("/afonso/owl-school/api/comunicado/create.php", {
+  const resposta = await fetch("/owl-school/api/comunicado/create.php", {
     method: "POST",
     body: formularioDados
 

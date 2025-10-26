@@ -18,15 +18,6 @@ $titulo = $_POST['titulo'];
 $data   = $_POST['data'];
 
 
-if (empty($titulo) || empty($data)) {
-  echo json_encode([
-    'success' => false,
-    'message' => 'Campos obrigatórios ausentes.'
-  ]);
-  exit;
-}
-
-
 $stmt = $conn->prepare("INSERT INTO prova (titulo, data) VALUES (?, ?)");
 $stmt->bind_param("ss", $titulo, $data);
 

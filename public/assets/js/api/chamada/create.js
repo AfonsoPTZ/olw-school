@@ -3,12 +3,18 @@ async function criarChamada() {
 
   const data = document.getElementById("data").value;
 
+
+  if (data === "" ) {
+  alert("Preencha todos os campos antes de enviar.");
+  return;}
+
+
   const formularioDados = new FormData();
 
   formularioDados.append("data", data);
 
 
-  const resposta = await fetch("/afonso/owl-school/api/chamada/create.php", {
+  const resposta = await fetch("/owl-school/api/chamada/create.php", {
     method: "POST",
     body: formularioDados
 

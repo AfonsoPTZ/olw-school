@@ -19,14 +19,6 @@ $descricao      = $_POST['descricao'];
 $alunoUsuarioId = $_POST['aluno_id'];
 
 
-if (empty($titulo) || empty($descricao) || empty($alunoUsuarioId)) {
-  echo json_encode([
-    'success' => false,
-    'message' => 'Campos obrigatórios ausentes.'
-  ]);
-  exit;
-}
-
 
 $stmt1 = $conn->prepare("INSERT INTO advertencia (titulo, descricao) VALUES (?, ?)");
 $stmt1->bind_param("ss", $titulo, $descricao);

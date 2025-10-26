@@ -18,15 +18,6 @@ $titulo = $_POST['titulo'];
 $corpo  = $_POST['corpo'];
 
 
-if (empty($id) || empty($titulo) || empty($corpo)) {
-    echo json_encode([
-        "success" => false,
-        "message" => "Campos obrigatórios ausentes."
-    ]);
-    exit;
-}
-
-
 $stmt = $conn->prepare("UPDATE comunicado SET titulo = ?, corpo = ? WHERE id = ?");
 $stmt->bind_param("ssi", $titulo, $corpo, $id);
 

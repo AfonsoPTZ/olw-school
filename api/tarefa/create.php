@@ -19,15 +19,6 @@ $descricao    = $_POST['descricao'];
 $data_entrega = $_POST['data_entrega'];
 
 
-if (empty($titulo) || empty($descricao) || empty($data_entrega)) {
-  echo json_encode([
-    'success' => false,
-    'message' => 'Campos obrigatórios ausentes.'
-  ]);
-  exit;
-}
-
-
 $stmt = $conn->prepare("INSERT INTO tarefa (titulo, descricao, data_entrega) VALUES (?, ?, ?)");
 $stmt->bind_param("sss", $titulo, $descricao, $data_entrega);
 

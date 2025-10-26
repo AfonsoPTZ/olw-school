@@ -21,15 +21,6 @@ $horaFim    = $_POST['fim'];
 $disciplina = $_POST['disciplina'];
 
 
-if (empty($id) || empty($diaSemana) || empty($horaInicio) || empty($horaFim) || empty($disciplina)) {
-  echo json_encode([
-    "success" => false,
-    "message" => "Campos obrigatórios ausentes."
-  ]);
-  exit;
-}
-
-
 $stmt = $conn->prepare("UPDATE horarios_aula SET dia_semana = ?, inicio = ?, fim = ?, disciplina = ? WHERE id = ?");
 $stmt->bind_param("ssssi", $diaSemana, $horaInicio, $horaFim, $disciplina, $id);
 
