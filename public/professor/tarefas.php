@@ -112,6 +112,9 @@ require_role('professor');
   <script src="/owl-school/public/assets/js/api/tarefa/create.js"></script>
   <script src="/owl-school/public/assets/js/api/tarefa/delete.js"></script>
   <script src="/owl-school/public/assets/js/api/tarefa/update.js"></script>
+
+  <script src="/owl-school/public/assets/js/api/logout.js" defer></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

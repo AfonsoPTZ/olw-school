@@ -81,6 +81,8 @@ require_role('aluno');
   <!-- ============================== -->
   <!-- Scripts -->
   <!-- ============================== -->
+  <script src="/owl-school/public/assets/js/api/logout.js" defer></script>
+
   <script src="/owl-school/public/assets/js/api/tarefa/read.js"></script>
   <script src="/owl-school/public/assets/js/api/comunicado/read.js"></script>
   <script src="/owl-school/public/assets/js/api/utils/aluno/advertencia_aluno.js"></script>

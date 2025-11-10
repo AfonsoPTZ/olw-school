@@ -4,7 +4,6 @@ require_once __DIR__ . '/../../includes/auth.php';
 require_login();
 require_role('professor');
 
-$usuarioNome = $_SESSION['user_name'];
 ?>
 
 <!doctype html>
@@ -33,7 +32,7 @@ $usuarioNome = $_SESSION['user_name'];
   <div class="flex-grow-1" style="margin-left: 220px;">
     <main class="container py-4">
 
-      <h1 class="h4 mb-2">Bem-vindo, <strong><?= htmlspecialchars($usuarioNome) ?></strong>!</h1>
+      <h1 class="h4 mb-2">Bem-vindo, <span id="userName"></span>!</h1>
       <p class="mb-4 text-muted">Aqui estão suas informações.</p>
 
       <!-- Card inicial (opcional, já no padrão das outras telas) -->
@@ -51,6 +50,10 @@ $usuarioNome = $_SESSION['user_name'];
   <!-- Scripts -->
   <!-- ============================== -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="/owl-school/public/assets/js/api/logout.js"></script>
+
+  <script src="/owl-school/public/assets/js/api/get_name.js"></script>
 
 </body>
 </html>

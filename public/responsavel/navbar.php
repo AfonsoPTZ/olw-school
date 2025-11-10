@@ -23,7 +23,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
         <a class="nav-link text-white" href="desempenho.php">📊 Desempenho</a>
       </li>
       <li class="nav-item mt-3">
-        <a class="nav-link text-danger fw-bold" href="/owl-school/public/logout.php">🚪 Sair</a>
+        <a id="btnLogout" class="nav-link text-danger fw-bold" href="#">🚪 Sair</a>
       </li>
     </ul>
   </nav>

@@ -119,7 +119,8 @@ require_role('admin');
   <script src="/owl-school/public/assets/js/api/advertencia/update.js"></script>
   <script src="/owl-school/public/assets/js/api/advertencia/delete.js"></script>
 
-  <!-- Helper: popula o <select id="aluno_id"> -->
+  <script src="/owl-school/public/assets/js/api/logout.js" defer></script>
+
   <script src="/owl-school/public/assets/js/api/utils/aluno_select.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

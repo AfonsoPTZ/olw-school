@@ -74,10 +74,10 @@ require_role('aluno');
   <!-- ============================== -->
   <!-- Scripts -->
   <!-- ============================== -->
-  <!-- Preenche cada <tbody id="segunda|terca|..."> -->
+  <script src="/owl-school/public/assets/js/api/logout.js" defer></script>
+
   <script src="/owl-school/public/assets/js/api/agenda/read.js"></script>
 
-  <!-- Bootstrap (por último) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
