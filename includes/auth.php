@@ -1,3 +1,12 @@
+  <?php
+
+if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
+  header('Location: /owl-school/public/index.php?erro=acesso_negado');
+  exit;
+}
+
+?>
+
 <?php
 
 

@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../../includes/auth.php';
-require_once __DIR__ . '/../../db/conexao.php';
 
 require_login();
 require_role('aluno');
@@ -16,7 +15,7 @@ require_role('aluno');
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
 </head>
 
 <body class="bg-light">
