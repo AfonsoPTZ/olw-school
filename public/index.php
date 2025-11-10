@@ -14,6 +14,8 @@
   <!-- CSS próprio -->
   <!-- ============================== -->
   <link rel="stylesheet" href="/owl-school/public/assets/css/index.css">
+  <link rel="stylesheet" href="/owl-school/public/assets/css/cursor.css">
+
 </head>
 
 <body class="bg-light">
@@ -59,6 +61,7 @@
   <!-- ============================== -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/owl-school/public/assets/js/api/auth.js"></script>
+  <script src="/owl-school/public/assets/js/cursor.js"></script>
 
 </body>
 </html>

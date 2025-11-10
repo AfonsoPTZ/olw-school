@@ -16,8 +16,6 @@ require_role('admin');
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- CSS próprio -->
-  <link rel="stylesheet" href="/owl-school/public/assets/css/admin/advertencia.css"> 
 
 </head>
 
